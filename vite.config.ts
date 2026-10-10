@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: process.env.GITHUB_PAGES === 'true'
+      ? '/himpunan-mataratu---teknik-pertambangan-batubara/'
+      : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
